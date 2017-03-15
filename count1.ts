@@ -1,5 +1,5 @@
-export class count1 {
-    countFunc1 = function (value) {
+export class Count1 {
+    countFunc1 (value) {
        return (value + 1);
     }
 }

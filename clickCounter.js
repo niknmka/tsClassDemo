@@ -1,10 +1,10 @@
 "use strict";
-var clickCounter = (function () {
-    function clickCounter() {
-        this.clickCounterFunc = function (someArg, callSomeFunc, value) {
-            return [someArg + 1, callSomeFunc(value)];
-        };
+var ClickCounter = (function () {
+    function ClickCounter() {
     }
-    return clickCounter;
+    ClickCounter.prototype.clickCounterFunc = function (someArg, callSomeFunc, value) {
+        return [someArg + 1, callSomeFunc(value)];
+    };
+    return ClickCounter;
 }());
-exports.clickCounter = clickCounter;
+exports.ClickCounter = ClickCounter;

@@ -1,6 +1,6 @@
-import count1 from './count1'
-import count2 from './count2'
-import clickCounter from './clickCounter'
+import { count1 } from './count1'
+import { count2 } from './count2'
+import { сlickCounter } from './clickCounter'
 
 document.getElementById("p1").style.color="blue";
 document.getElementById("p1").style.font="large";
@@ -13,11 +13,10 @@ let span = document.getElementById('span');
 let span2 = document.getElementById('span2');
 let countOne = new count1(count);
 let countTwo = new count2(count);
-let clickCount = new clickCounter();
+let clickCount = new сlickCounter();
 
 
 /*
- *
  
  It needs to be exactly the same as in Java syntacticly. Please look carefully at the examples in the documentation.
  
@@ -31,14 +30,12 @@ let clickCount = new clickCounter();
  const someObj = new SomeClass()
  
  window['somObj'] = someObj
- 
- 
- 
+
  */
 
 // Javascript doesn't have the following syntax structure:
-class doAction {
-    window.['doActionFunc'] = function () {
+class DoAction {
+    doActionFunc() {
     let results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1() : countTwo.countFunc2(), count);
     clickNumber = results[0];
     count = results[1];
@@ -47,3 +44,6 @@ class doAction {
     span2.innerHTML = clickNumber.toString();
     }
 }
+
+const doAction = new DoAction();
+window['doAction'] = doAction;

@@ -1,10 +1,10 @@
 "use strict";
-var count1 = (function () {
-    function count1() {
-        this.countFunc1 = function (value) {
-            return (value + 1);
-        };
+var Count1 = (function () {
+    function Count1() {
     }
-    return count1;
+    Count1.prototype.countFunc1 = function (value) {
+        return (value + 1);
+    };
+    return Count1;
 }());
-exports.count1 = count1;
+exports.Count1 = Count1;
