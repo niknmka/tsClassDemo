@@ -15,11 +15,29 @@ let countOne = new count1(count);
 let countTwo = new count2(count);
 let clickCount = new clickCounter();
 
+
+/*
+ *
+ 
+ It needs to be exactly the same as in Java syntacticly. Please look carefully at the examples in the documentation.
+ 
+ class SomeClass {
+    someFunc() {
+    }
+ }
+ 
+ // We are diviating from Java here (in Java it would be placed into the main static method of the class):
+ 
+ const someObj = new SomeClass()
+ 
+ window['somObj'] = someObj
+ 
+ 
+ 
+ */
+
+// Javascript doesn't have the following syntax structure:
 class doAction {
-
-
-
-
     window.['doActionFunc'] = function () {
     let results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1() : countTwo.countFunc2(), count);
     clickNumber = results[0];
@@ -28,5 +46,4 @@ class doAction {
     span.innerHTML = count.toString();
     span2.innerHTML = clickNumber.toString();
     }
-
 }
