@@ -72,6 +72,7 @@
 
 "use strict";
 
+exports.__esModule = true;
 var ClickCounter = (function () {
     function ClickCounter() {
     }
@@ -89,6 +90,7 @@ exports.ClickCounter = ClickCounter;
 
 "use strict";
 
+exports.__esModule = true;
 var Count1 = (function () {
     function Count1() {
     }
@@ -106,15 +108,16 @@ exports.Count1 = Count1;
 
 "use strict";
 
-var Сount2 = (function () {
-    function Сount2() {
+exports.__esModule = true;
+var Count2 = (function () {
+    function Count2() {
     }
-    Сount2.prototype.countFunc2 = function (value) {
+    Count2.prototype.countFunc2 = function (value) {
         return (value + 2);
     };
-    return Сount2;
+    return Count2;
 }());
-exports.Сount2 = Сount2;
+exports.Count2 = Count2;
 
 
 /***/ }),
@@ -123,6 +126,7 @@ exports.Сount2 = Сount2;
 
 "use strict";
 
+exports.__esModule = true;
 var count1_1 = __webpack_require__(1);
 var count2_1 = __webpack_require__(2);
 var clickCounter_1 = __webpack_require__(0);
@@ -134,9 +138,9 @@ var count = 0;
 var clickNumber = 0;
 var span = document.getElementById('span');
 var span2 = document.getElementById('span2');
-var countOne = new count1_1.count1(count);
-var countTwo = new count2_1.count2(count);
-var clickCount = new clickCounter_1.сlickCounter();
+var countOne = new count1_1.Count1();
+var countTwo = new count2_1.Count2();
+var clickCount = new clickCounter_1.ClickCounter();
 /*
  
  It needs to be exactly the same as in Java syntacticly. Please look carefully at the examples in the documentation.
@@ -158,7 +162,7 @@ var DoAction = (function () {
     function DoAction() {
     }
     DoAction.prototype.doActionFunc = function () {
-        var results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1() : countTwo.countFunc2(), count);
+        var results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1 : countTwo.countFunc2, count);
         clickNumber = results[0];
         count = results[1];
         console.log(count, clickNumber);

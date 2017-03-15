@@ -1,6 +1,6 @@
-import { count1 } from './count1'
-import { count2 } from './count2'
-import { сlickCounter } from './clickCounter'
+import { Count1 } from './count1'
+import { Count2 } from './count2'
+import { ClickCounter } from './clickCounter'
 
 document.getElementById("p1").style.color="blue";
 document.getElementById("p1").style.font="large";
@@ -11,9 +11,9 @@ let count: number = 0;
 let clickNumber: number = 0;
 let span = document.getElementById('span');
 let span2 = document.getElementById('span2');
-let countOne = new count1(count);
-let countTwo = new count2(count);
-let clickCount = new сlickCounter();
+let countOne = new Count1();
+let countTwo = new Count2();
+let clickCount = new ClickCounter();
 
 
 /*
@@ -36,7 +36,7 @@ let clickCount = new сlickCounter();
 // Javascript doesn't have the following syntax structure:
 class DoAction {
     doActionFunc() {
-    let results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1() : countTwo.countFunc2(), count);
+    let results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1 : countTwo.countFunc2, count);
     clickNumber = results[0];
     count = results[1];
     console.log(count, clickNumber);
