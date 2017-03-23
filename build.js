@@ -72,7 +72,7 @@
 
 "use strict";
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var ClickCounter = (function () {
     function ClickCounter() {
     }
@@ -90,7 +90,7 @@ exports.ClickCounter = ClickCounter;
 
 "use strict";
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Count1 = (function () {
     function Count1() {
     }
@@ -108,7 +108,7 @@ exports.Count1 = Count1;
 
 "use strict";
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Count2 = (function () {
     function Count2() {
     }
@@ -126,7 +126,7 @@ exports.Count2 = Count2;
 
 "use strict";
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var count1_1 = __webpack_require__(1);
 var count2_1 = __webpack_require__(2);
 var clickCounter_1 = __webpack_require__(0);

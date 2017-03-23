@@ -1,4 +1,15 @@
 {
-  "compilerOptions": {
-  }
+  "compilerOptions"                : {
+    "module"                 : "CommonJS",
+    "target"                 : "es5",
+    "noImplicitAny"          : false,
+    "sourceMap"              : true,
+    "moduleResolution"       : "node",
+    "pretty"                 : true,
+    "stripInternal"          : true,
+    "noEmitHelpers"          : false
+  },
+  "exclude"                        : [
+    "node_modules"
+  ]
 }

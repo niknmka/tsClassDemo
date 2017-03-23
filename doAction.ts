@@ -7,6 +7,8 @@ document.getElementById("p1").style.font="large";
 document.getElementById("p1").style.background="";
 document.getElementById("button").style.color="red";
 
+
+
 let count: number = 0;
 let clickNumber: number = 0;
 let span = document.getElementById('span');
