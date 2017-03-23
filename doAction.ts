@@ -38,6 +38,7 @@ let clickCount = new ClickCounter();
 // Javascript doesn't have the following syntax structure:
 class DoAction {
     doActionFunc() {
+     // Passs objects instead of functions here.
     let results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1 : countTwo.countFunc2, count);
     clickNumber = results[0];
     count = results[1];
