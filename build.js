@@ -72,12 +72,14 @@
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var ClickCounter = (function () {
     function ClickCounter() {
     }
-    ClickCounter.prototype.clickCounterFunc = function (someArg, callSomeFunc, value) {
-        return [someArg + 1, callSomeFunc(value)];
+    ClickCounter.prototype.clickCounterFunc = function (someArg, someObj, value) {
+        // Use a function from the object here.
+        someObj = someObj.countFunc(value);
+        return [someArg + 1, someObj];
     };
     return ClickCounter;
 }());
@@ -90,11 +92,11 @@ exports.ClickCounter = ClickCounter;
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var Count1 = (function () {
     function Count1() {
     }
-    Count1.prototype.countFunc1 = function (value) {
+    Count1.prototype.countFunc = function (value) {
         return (value + 1);
     };
     return Count1;
@@ -108,11 +110,11 @@ exports.Count1 = Count1;
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var Count2 = (function () {
     function Count2() {
     }
-    Count2.prototype.countFunc2 = function (value) {
+    Count2.prototype.countFunc = function (value) {
         return (value + 2);
     };
     return Count2;
@@ -126,7 +128,7 @@ exports.Count2 = Count2;
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var count1_1 = __webpack_require__(1);
 var count2_1 = __webpack_require__(2);
 var clickCounter_1 = __webpack_require__(0);
@@ -162,7 +164,8 @@ var DoAction = (function () {
     function DoAction() {
     }
     DoAction.prototype.doActionFunc = function () {
-        var results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne.countFunc1 : countTwo.countFunc2, count);
+        // Pass objects instead of functions here.
+        var results = clickCount.clickCounterFunc(clickNumber, clickNumber % 2 == 0 ? countOne : countTwo, count);
         clickNumber = results[0];
         count = results[1];
         console.log(count, clickNumber);

@@ -1,9 +1,9 @@
-{
+/*{
   "compilerOptions"                : {
     "module"                 : "CommonJS",
-    "target"                 : "es5",
+    "target"                 : "es6",
     "noImplicitAny"          : false,
-    "sourceMap"              : true,
+    "sourceMap"              : false,
     "moduleResolution"       : "node",
     "pretty"                 : true,
     "stripInternal"          : true,
@@ -12,4 +12,4 @@
   "exclude"                        : [
     "node_modules"
   ]
-}
+}*/

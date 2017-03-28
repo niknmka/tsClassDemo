@@ -1,6 +1,8 @@
 export class ClickCounter {
-    clickCounterFunc (someArg, callSomeFunc, value) {
+    clickCounterFunc (someArg, someObj, value) {
         // Use a function from the object here.
-        return [someArg + 1, callSomeFunc(value)];
+        someObj = someObj.countFunc(value);
+        return [someArg + 1, someObj];
     }
 }
+

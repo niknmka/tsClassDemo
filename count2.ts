@@ -1,5 +1,5 @@
 export class Count2 {
-    countFunc2 (value) {
+    countFunc (value) {
         return (value + 2);
     }
 }
